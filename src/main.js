@@ -7,10 +7,10 @@ var BrowserWindow = electron.BrowserWindow;
 
 var mainWindow = null;
 
-app.on('window-all-close', function() {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+app.on('window-all-closed', function() {
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
 
 var startupOpts = {
@@ -33,10 +33,13 @@ var startupOpts = {
 };
 
 app.on('ready', function() {
-  mainWindow = new BrowserWindow(startupOpts);
-  mainWindow.loadUrl('https://miiGit.github.io');
-  mainWindow.on('closed', function() {
-    mainWindow = null;
-  });
-  mainWindow.show();
+
+    mainWindow = new BrowserWindow(startupOpts);
+    
+    mainWindow.loadURL('https://miiGit.github.io');
+    
+    mainWindow.on('closed', function() {
+        mainWindow = null;
+    });
+    mainWindow.show();
 });
