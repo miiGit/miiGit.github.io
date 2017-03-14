@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Code Editor</title>
+  <script src="https://raw.githubusercontent.com/hokein/electron-sample-apps/master/mini-code-editor/zepto.min.js"></script>
+  <script src="./editor.js"></script>
+  <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="./node_modules/codemirror/mode/css/css.js"></script>
+  <script src="./node_modules/codemirror/mode/xml/xml.js"></script>
+  <script src="./node_modules/codemirror/mode/javascript/javascript.js"></script>
+  <scritp src="./node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/lesser-dark.css">
+</head>
+<body>
+  <div class="buttons">
+    <button id="new">New </button>
+    <button id="open">Open </button>
+    <button id="save">Save</button>
+  </div>
+  <div id="editor"></div>
+  <div class="info">
+    <label>Filename: </label><span id="title"></span>
+    <label>Mode: </label><span id="mode"></span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "minie-electron-code-editor",
+  "version": "1.1.0",
+  "main": "editor.js",
+  "dependencies": {
+    "codemirror": "^5.24.2"
+  }
+}
